@@ -129,6 +129,7 @@ male_words <- WordFreq(male_train$combi)
 female_words <- WordFreq(female_train$combi)
 
 #the sum of all words is counted and ordered by all_words
+#calculating the probability of male words 
 all_words<-merge(x = male_words, y = female_words, by = "word", all = TRUE)
 colnames(all_words) <- c("Word", "M_frequency", "F_frequency")
 all_words[is.na(all_words)] <- 0
