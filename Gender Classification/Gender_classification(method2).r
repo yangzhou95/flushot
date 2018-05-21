@@ -141,10 +141,11 @@ for(i in 1:nrow(words))
     } 
   }
   
+ #1 for male probability being higher and 0 for female probability being higher
   if( p > q){
-    return p
+    return(1)
   } else if( p<q) {
-    return q
+    return(0)
   }
 }
 
